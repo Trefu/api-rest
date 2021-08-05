@@ -12,10 +12,12 @@
             "dest": "/"
         },
         {
-            "src": "/api",
+            "src": "/api ",
             "methods": [
                 "POST",
-                "GET"
+                "GET",
+                "DELETE",
+                "PUT"
             ],
             "dest": "/api"
         }

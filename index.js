@@ -12,10 +12,8 @@ const port = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
-
 //RUTAS
-app.use('/', require('./api/api.js'));
+app.use('/api', require('./api/api'));
 
 //ERROR HANDLER
 app.use((req, res, _next) => {
