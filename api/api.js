@@ -2,7 +2,12 @@ const router = require('express').Router()
 
 router.get('/', (req, res, next) => {
     res.json({
-        endpoints: { login: 'recibe post' }
+        endpoints: [
+            { login: 'POST' },
+            { logout: 'GET' },
+            { register: 'POST' },
+            { profile: 'GET' }
+        ]
     })
 })
 
