@@ -1,6 +1,6 @@
 const router = require('express').Router();
-
-router.get('/', (req, res, next) => {
+const validatetoken = require('./validatetoken')
+router.get('/', validatetoken, (req, res, next) => {
     res.json({ message: 'profile' })
 })
 

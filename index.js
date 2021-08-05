@@ -15,18 +15,13 @@ app.use(morgan('dev'));
 
 //RUTAS
 app.use('/api', require('./src/api/api'));
-app.use('/', (req, res) => {
-    res.json({
-        estado: true,
-        message: 'boeenas'
-    })
-})
+
 //ERROR HANDLER
 app.use((req, res, _next) => {
     res.status(404);
     // TODO: 404 pagina
     // // respond with html page
-    return res.send({ error: 'Not found' });
+    return res.send({ error: ' algo salio mal' });
 });
 
 

@@ -3,19 +3,18 @@ const router = require('express').Router()
 router.get('/', (req, res, next) => {
     res.json({
         endpoints: [
-            { login: 'POST' },
-            { logout: 'GET' },
-            { register: 'POST' },
-            { profile: 'GET' }
+            { api_auth_login: 'POST' },
+            { api_logout: 'GET' },
+            { api_auth_register: 'POST' },
+            { api_profile: 'GET' }
         ]
     })
 })
 
 router.use('/test', require('./routes/test'));
-router.use('/login', require('./routes/login'));
 router.use('/logout', require('./routes/logout'));
-router.use('/register', require('./routes/register'));
 router.use('/profile', require('./routes/profile'));
+router.use('/auth', require('./routes/auth'));
 
 
 module.exports = router
