@@ -21,7 +21,7 @@ app.use((req, res, _next) => {
     res.status(404);
     // TODO: 404 pagina
     // // respond with html page
-    return res.send({ error: ' algo salio mal' });
+    return res.json({ error: ' algo salio mal' });
 });
 
 
